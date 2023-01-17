@@ -1,6 +1,6 @@
 # Example Github Workflows #
 
-This repo has example Github workflows that you can use to get your Canopy project deploying to a free hosting service.
+This repo has example Github workflows that you can use to get your Canopy project deploying to a free hosting service, or building electron apps.
 
 ## Provider requirements ##
 
@@ -39,5 +39,11 @@ These are instructions for how to set up automatic deployment of your Canopy pro
 6. Pick your user or organization, then pick your repo. For the "Branch to deploy" option, select the `build` branch.
 
 7. Now your Netlify website should deploy on any change to the `build` branch, which should update on any change to the topics files on the `main` branch.
+
+## Electron ##
+
+Use `electron/electron.yml` to build Electron apps from your project. You must have a 1024x1024 `png` icon file in your `project/assets` directory called `electron-icon.png`.
+
+Warning: If you use online assets like images, these will not work in an offline electron app. All assets should be served locally by using a `assets` directory in the project directory, and then referencing assets with the `/_assets/` prefix from your `expl` file markdown.
 
 Happy editing!
