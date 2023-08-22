@@ -38,7 +38,9 @@ jobs:
         git config user.email "$AUTHOR_EMAIL"
 
         git fetch origin
-        git checkout origin/main -- README.md
+        rm README.md > /dev/null 2>&1
+        git checkout origin/main -- README.md > /dev/null 2>&1
+        git add -u
         git add .canopy_bulk_original_selection
         git add EDIT_ME
         git status

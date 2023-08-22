@@ -20,7 +20,7 @@ jobs:
       run: |
         set -ex
 
-        canopy bulk --finish -n canopy_bulk_file
+        canopy bulk --finish -n EDIT_ME
 
         rev=$(git rev-parse --short HEAD)
         TOPICS_CHANGES=$(git status --porcelain | grep "topics/")
